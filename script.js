@@ -1,7 +1,3 @@
-let black = document.querySelectorAll("black-piece");
+console.log('hello')
+const black = document.getElementById['black']
 
-black.addEventListener('click', selectPiece);
-
-function selectPiece() {
-    console.log('hello')
-}
