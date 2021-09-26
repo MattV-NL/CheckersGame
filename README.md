@@ -1,5 +1,5 @@
 # CheckersGame
-First Project
+This is my first project created with HMTL, CSS, and Javascript with the help of GetCodingNL. The goal is to be able to select your piece from the board and move it around using javascipt.
 
 ## Functionality
 This will function as a two player game of chess abiding by all the traditional rules of the game.
