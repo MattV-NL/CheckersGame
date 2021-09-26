@@ -1,5 +1,9 @@
-const blackPiece = document.querySelector(".black-piece");
+const blackPiece = document.querySelectorAll(".black-piece");
 
-blackPiece.AddEventListener('click', e => {
+function handleClick() {
+    blackPiece.AddEventListener('click', e => {
     console.log(e)
 })
+}
+
+handleClick()
