@@ -1,9 +1,10 @@
-const blackPiece = document.querySelectorAll(".black-piece");
+//document.getElementById("welcome").style.display = 'none'
 
-function handleClick() {
-    blackPiece.AddEventListener('click', e => {
-    console.log(e)
-})
+let button = document.getElementById('start-button');
+let welcomeMessage = document.getElementById('welcome-background');
+
+function startButton() {
+    welcomeMessage.style.display = 'none'
 }
 
-handleClick()
+button.addEventListener('click', startButton)
