@@ -1,6 +1,5 @@
-.body {
-    font-size: 16px;
-    font-weight: normal;
+body {
+    background-color: grey;
 }
 
 .container {
@@ -64,17 +63,24 @@ td {
 .welcome-message {
     height: 40vh;
     width: 60vw;
-    background-color: white;
-    border-radius: 10%;
+    background-color: brown;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
     display: flex;
     font-size: 25px;
     flex-direction: column;
+    border: solid white 5px;
+}
+
+h1 {
+    background-color: grey;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .start-button {
-    background-color: brown;
+    background-color: grey;
     height: 40px;
     width: 100px;
     color: white;
