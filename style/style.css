@@ -57,7 +57,7 @@ td {
 }
 
 .welcome-background {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -99,5 +99,14 @@ h1 {
 
 .start-button:hover {
     background-color: tan;
+    color: black;
+}
+
+.white-turn-text {
+    color: black;
+    border: white solid 5px;
+}
+
+.black-turn-text {
     color: black;
 }
