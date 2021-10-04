@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 td {
@@ -41,6 +42,14 @@ td {
     border-radius: 50%;
     height: 75px;
     width: 75px;
+}
+
+.king.white-piece {
+    border: solid 4px gold;
+}
+
+.king.black-piece {
+    border: solid 4px gold;
 }
 
 .gameboard {
