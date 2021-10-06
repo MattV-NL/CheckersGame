@@ -80,7 +80,7 @@ function removeCellOnClick() {
 
 function resetBorders() {
     for (let i = 0; i < playerPieces.length; i++) {
-        playerPieces[i].style.border = '1px solid white';
+        playerPieces[i].style.border = '2px solid green';
     }
     resetSelectedPieceProperties();
     getSelectedPiece();
@@ -88,7 +88,6 @@ function resetBorders() {
 
 function resetSelectedPieceProperties() {
     selectedPiece.pieceId = -1;
-    //selectedPiece.pieceId = -1;
     selectedPiece.isKing = false;
     selectedPiece.seventhSpace = false;
     selectedPiece.ninethSpace = false;
@@ -213,7 +212,7 @@ function changePieceStyle() {
 
 function giveSpacesClick() {
     if (selectedPiece.seventhSpace) {
-        spaces[selectedPiece.indexOfBoardPiece + 7].setAttribute('onclick, makeMove(7)');
+        spaces[selectedPiece.indexOfBoardPiece + 7].setAttribute('onclick', 'makeMove(7)');
     }
     if (selectedPiece.ninethSpace) {
         spaces[selectedPiece.indexOfBoardPiece + 9].setAttribute('onclick', 'makeMove(9)');
@@ -299,6 +298,7 @@ function removeEventListener() {
     } else {
         for (let i = 0; i < blackPieces.length; i ++) {
         blackPieces[i].removeEventListener('click', getPlayerPieces);
+        }
     }
     checkForWin();
 }
@@ -337,4 +337,4 @@ function changePlayer() {
     handleClickOfPieces();
 }
 
-handleClickOfPieces()}
+handleClickOfPieces();
