@@ -60,7 +60,26 @@ function handleClickOfPieces() {
             blackPieces[i].addEventListener('click', getPlayerPieces);
         }
     }
+    targetPieces();
 }
+
+// Getting the target's ID and assigning it to selectedPiece.pieceId
+function targetPieces() {
+    if (turn) {
+        for (let i = 0; i < whitePieces.length; i++) {
+            whitePieces[i].addEventListener('click', getTargetId);
+        }
+    } else {
+        for (let i = 0; i < blackPieces.length; i++) {
+            blackPieces[i].addEventListener('click', getTargetId);
+        }
+    }
+}
+
+function getTargetId(x) {
+    console.log(x.target.id);
+}
+// End of new code
 
 function getPlayerPieces() {
     if (turn) {
@@ -100,9 +119,9 @@ function resetSelectedPieceProperties() {
 }
 
 /*--------------- issue with event being deprecated ----------------------- */
-
+// tried using the x variable from new code added above but comes back 'x is not defined' 
 function getSelectedPiece() {
-    selectedPiece.pieceId = parseInt(event.target.id);
+    selectedPiece.pieceId = parseInt(x.target.id);
     selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
     isPieceKing();
 }
