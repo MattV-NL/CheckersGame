@@ -127,7 +127,7 @@ function resetSelectedPieceProperties() {
 /*--------------- issue with event being deprecated ----------------------- */
  
 function getSelectedPiece() {
-    //selectedPiece.pieceId = parseInt(event.target.id);
+   //selectedPiece.pieceId = parseInt(event.target.id);
     //selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
     //isPieceKing();
 }
