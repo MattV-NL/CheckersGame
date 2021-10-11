@@ -13,15 +13,17 @@ const gameboard = [
 
 /* reference elements in the DOM*/
 
+let findPiece = function (pieceId) {
+    let parsed = parseInt(pieceId);
+    return gameboard.indexOf(parsed);
+}
+
 const spaces = document.querySelectorAll('td');
 let whitePieces = document.querySelectorAll('.white-piece');
 let blackPieces = document.querySelectorAll('.black-piece');
 const whiteTurnText = document.querySelectorAll('.white-turn-text');
 const blackTurnText = document.querySelectorAll('.black-turn-text');
-let findPiece = function (pieceId) {
-    let parsed = parseInt(pieceId);
-    return gameboard.indexOf(parsed);
-}
+
 
 /* let us determine  whose turn it is and eventually determine a winner with 'score' */
 
@@ -53,11 +55,11 @@ let selectedPiece = {
 function handleClickOfPieces() {
     if (turn) {
         for (let i = 0; i < whitePieces.length; i++) {
-            whitePieces[i].addEventListener('click', getPlayerPieces);
+            whitePieces[i].addEventListener("click", getPlayerPieces);
         }
     } else {
         for (let i = 0; i < blackPieces.length; i++) {
-            blackPieces[i].addEventListener('click', getPlayerPieces);
+            blackPieces[i].addEventListener("click", getPlayerPieces);
         }
     }
     targetPieces();
@@ -76,8 +78,11 @@ function targetPieces() {
     }
 }
 
-function getTargetId(x) {
-    console.log(x.target.id);
+function getTargetId(event) {
+    console.log(parseInt(event.target.id));
+    selectedPiece.pieceId = parseInt(event.target.id);
+    selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
+    isPieceKing();
 }
 // End of new code
 
@@ -107,6 +112,7 @@ function resetBorders() {
 
 function resetSelectedPieceProperties() {
     selectedPiece.pieceId = -1;
+    selectedPiece.pieceId = -1;
     selectedPiece.isKing = false;
     selectedPiece.seventhSpace = false;
     selectedPiece.ninethSpace = false;
@@ -119,11 +125,11 @@ function resetSelectedPieceProperties() {
 }
 
 /*--------------- issue with event being deprecated ----------------------- */
-// tried using the x variable from new code added above but comes back 'x is not defined' 
+ 
 function getSelectedPiece() {
-    selectedPiece.pieceId = parseInt(x.target.id);
-    selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
-    isPieceKing();
+    //selectedPiece.pieceId = parseInt(event.target.id);
+    //selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
+    //isPieceKing();
 }
 
 function isPieceKing() {
