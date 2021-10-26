@@ -33,13 +33,9 @@ let blackScore = 12;
 let playerPieces;
 
 let selectedPiece = {
-//get the specific piece id
     pieceId: -1,
-//get location on the board we created
     indexOfBoardPiece: -1,
-//determine if it is a king
     isKing: false,
-//all the possible moves that are available
     seventhSpace: false,
     ninethSpace: false,
     fourteenthSpace: false,
@@ -82,7 +78,7 @@ function getTargetId(event) {
     console.log(parseInt(event.target.id));
     selectedPiece.pieceId = parseInt(event.target.id);
     selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
-    isPieceKing();
+    //isPieceKing();
 }
 // End of new code
 
@@ -107,7 +103,8 @@ function resetBorders() {
         playerPieces[i].style.border = '2px solid green';
     }
     resetSelectedPieceProperties();
-    getSelectedPiece();
+    //getSelectedPiece();
+    isPieceKing();
 }
 
 function resetSelectedPieceProperties() {
