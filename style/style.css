@@ -74,15 +74,15 @@ td {
     width: 60vw;
     background-color: brown;
     border-radius: 15px;
-    justify-content: center;
-    align-items: center;
     display: flex;
+    align-items: center;
     font-size: 25px;
     flex-direction: column;
     border: solid white 5px;
+    text-align: center;
 }
 
-h1 {
+.welcome-header {
     background-color: grey;
     padding: 20px;
     border-radius: 15px;

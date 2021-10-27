@@ -58,11 +58,11 @@ function handleClickOfPieces() {
             blackPieces[i].addEventListener("click", getPlayerPieces);
         }
     }
-    targetPieces();
+    //targetPieces();
 }
 
 // Getting the target's ID and assigning it to selectedPiece.pieceId
-function targetPieces() {
+/*function targetPieces() {
     if (turn) {
         for (let i = 0; i < whitePieces.length; i++) {
             whitePieces[i].addEventListener('click', getTargetId);
@@ -80,7 +80,7 @@ function getTargetId(event) {
     selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
     //isPieceKing();
 }
-// End of new code
+// End of new code*/
 
 function getPlayerPieces() {
     if (turn) {
@@ -103,8 +103,7 @@ function resetBorders() {
         playerPieces[i].style.border = '2px solid green';
     }
     resetSelectedPieceProperties();
-    //getSelectedPiece();
-    isPieceKing();
+    getSelectedPiece();
 }
 
 function resetSelectedPieceProperties() {
@@ -124,9 +123,9 @@ function resetSelectedPieceProperties() {
 /*--------------- issue with event being deprecated ----------------------- */
  
 function getSelectedPiece() {
-   //selectedPiece.pieceId = parseInt(event.target.id);
-    //selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
-    //isPieceKing();
+   selectedPiece.pieceId = parseInt(EventTarget.id);
+    selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId);
+    isPieceKing();
 }
 
 function isPieceKing() {
@@ -202,6 +201,7 @@ function getAvailableJumpSpaces() {
                     selectedPiece.minusFourteenthSpace = true;
             }
     }
+    checkPieceCondition();
 }
 
 function checkPieceCondition() {
