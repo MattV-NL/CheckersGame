@@ -28,4 +28,4 @@ This will function as a two player game of chess abiding by all the traditional 
 
 - A player wins when the opposing player has no more pieces remaining on the board.
 
-# This game is not yet funtional, I have moved on to other projects but as this was my firsdt one I intend on returning to it to resolve the issue I had. Thank you for your understanding and patience :)
+# This game is not yet funtional, I have moved on to other projects but as this was my first one I intend on returning to it to resolve the issue I had. Thank you for your understanding and patience :)
